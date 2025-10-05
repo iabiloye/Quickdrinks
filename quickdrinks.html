@@ -1,11 +1,111 @@
-<!DOCTYPE html>
+<!-- Abiloye Quickdrinks Web -->
+ <!-- Home Page -->
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickDrinks</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> QuickDrinks : Discover and Order </title>
+    <meta name="author" content=" Abiloye Iyanuoluwa John" />
+    <meta name="description" content="QuickDrinks - discover beverage pairings and order online" />
+    <meta name="keywords" content="drinks, beverages, cocktails, pairings, order online" />
+
+    <meta property="og:title" content="WDD 330 - QuickDrinks : Discover and Order" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="https://" /> -->
+    <!-- <meta property="og:image" content="https://raw.githubusercontent.com/iabiloye/wdd230/main/images/abiloyepr.jpg" /> -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="styles/">
+
+    <!--favicon icon place here in week 07--> 
+
 </head>
+
 <body>
-    
+
+    <header class="site-header">
+    <div class="container header-inner">
+    <a href="#" class="brand">🍹 <span class="brand-name">QuickDrinks</span></a>
+    <nav class="main-nav" aria-label="Primary">
+    <a href="#products">Products</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#locator">Locator</a>
+    <a href="#" id="account-link">Account</a>
+    <button id="cart-button" class="cart-btn" aria-label="View cart">
+    🛒 <span id="cart-count" class="cart-count">0</span>
+    </button>
+    </nav>
+    </div>
+    </header>
+
+
+<main>
+<!-- Hero / Search -->
+<section class="hero">
+<div class="container hero-inner">
+<h1>Find drinks, Perfect Pairings, and Place Order in Minutes</h1>
+<form id="search-form" class="search-form" role="search" aria-label="Search products">
+<input id="search-input" type="search" placeholder="Search drinks, meals, or cocktails..." />
+<button type="submit">Search</button>
+</form>
+</div>
+</section>
+
+
+<!-- Products Grid -->
+<section id="products" class="container products-section">
+<h2>Available Drinks</h2>
+<div id="product-grid" class="product-grid" aria-live="polite">
+<!-- Product cards will be injected by JS -->
+</div>
+</section>
+
+
+<!-- Recommended Pairings (static starter) -->
+<section id="recipes" class="container pairings">
+<h2>Recommended Pairings</h2>
+<div class="pairing-grid">
+<article class="pairing-card">
+<h3>Heineken</h3>
+<p>Best with: Grilled Chicken • Light lemon glaze</p>
+<a href="#" class="btn">View Recipe</a>
+</article>
+<article class="pairing-card">
+<h3>Maltina</h3>
+<p>Best with: Fried Rice • Spicy pepper sauce</p>
+<a href="#" class="btn">View Recipe</a>
+</article>
+</div>
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div>
+<strong>QuickDrinks NG</strong>
+<p>Discover. Pair. Order.</p>
+</div>
+<nav>
+<a href="#">Contact</a>
+<a href="#"> Terms </a>
+<a href="#">Privacy</a>
+</nav>
+</div>
+</footer>
+
+
+<script src="js/app.js" defer></script>
 </body>
 </html>
