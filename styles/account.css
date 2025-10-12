@@ -1,0 +1,208 @@
+/* =============================
+   QuickDrinks - Account Page
+   Author: Abiloye Iyanuoluwa John
+   ============================= */
+
+/* ---- Base Styles ---- */
+body {
+  margin: 0;
+  font-family: "SUSE Mono", monospace;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ---- Header ---- */
+.site-header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.brand {
+  font-family: "Alan Sans", sans-serif;
+  font-weight: 700;
+  color: #ffd700;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.brand-name {
+  color: #ffffff;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ffd700;
+}
+
+/* ---- Account Section ---- */
+.account-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+  background-color: #f5f8fb;
+  min-height: 80vh;
+}
+
+.account-section {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem 2.5rem;
+}
+
+.account-section h1 {
+  font-family: "Alan Sans", sans-serif;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Form ---- */
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #003366;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: "SUSE Mono", monospace;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.4);
+  outline: none;
+}
+
+/* Validation colors */
+input:valid {
+  border-color: #28a745;
+}
+input:invalid {
+  border-color: #dc3545;
+}
+
+/* ---- Button ---- */
+.submit-btn {
+  background-color: #ffd700;
+  color: #003366;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #ffcc00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Login Link ---- */
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #003366;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-inner nav a {
+  color: #ffd700;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.footer-inner nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 600px) {
+  .header-inner, .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .account-section {
+    padding: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+  }
+}

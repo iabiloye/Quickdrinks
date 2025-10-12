@@ -1,0 +1,325 @@
+/* ===============================
+   QuickDrinks – Main Stylesheet
+   Author: Abiloye Iyanuoluwa John
+   =============================== */
+
+/* General color to pick from */
+:root {
+  --navy: #003366;
+  --gold: #FFD700;
+  --light-sky: #ABE0FF;
+  --white: #ffffff;
+  --dark-gray: #333333;
+  --valid: #28A745;
+  --invalid: #DC3545;
+}
+
+/* Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SUSE Mono", monospace;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+.site-header {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Alan Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.brand-name {
+  color: var(--white);
+}
+
+.main-nav a {
+  color: var(--white);
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--gold);
+}
+
+.cart-btn {
+  background: var(--gold);
+  border: none;
+  color: var(--navy);
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-left: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cart-btn:hover {
+  background: #e6c400;
+}
+
+.cart-count {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, var(--navy), var(--light-sky));
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-family: "Alan Sans", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.search-form input {
+  width: 60%;
+  max-width: 400px;
+  padding: 0.8rem;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  font-family: "SUSE Mono", monospace;
+}
+
+.search-form button {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background: #e6c400;
+}
+
+/* ==== Products Section ==== */
+.products-section {
+  margin: 3rem auto;
+}
+
+.products-section h2 {
+  font-family: "Alan Sans", sans-serif;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card h3 {
+  color: var(--navy);
+  font-family: "Alan Sans", sans-serif;
+  margin-top: 0.8rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* ==== Pairings Section ==== */
+.pairings {
+  background-color: var(--light-sky);
+  padding: 3rem 0;
+}
+
+.pairings h2 {
+  text-align: center;
+  color: var(--navy);
+  font-family: "Alan Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.pairing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.pairing-card {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pairing-card h3 {
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.pairing-card p {
+  font-family: "SUSE Mono", monospace;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e6c400;
+}
+
+/* ==== Footer ==== */
+.site-footer {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer-inner nav a {
+  color: var(--gold);
+  text-decoration: none;
+  margin: 0 0.6rem;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.footer-inner nav a:hover {
+  color: var(--white);
+}
+
+/* form validation */
+input:valid {
+  border-color: var(--valid);
+  box-shadow: 0 0 6px var(--valid);
+}
+
+input:invalid {
+  border-color: var(--invalid);
+  box-shadow: 0 0 6px var(--invalid);
+}
+
+/* Reponsice Design */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .search-form input {
+    width: 80%;
+  }
+
+  .product-card img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .search-form input {
+    width: 100%;
+  }
+
+  .cart-btn {
+    padding: 0.4rem 0.6rem;
+  }
+}
