@@ -30,11 +30,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const productGrid = document.getElementById("product-grid");
   if (productGrid) {
+    // js/app.js (update sampleDrinks array)
     const sampleDrinks = [
-        { id: "1", name: "Heineken", img: "img/heineken.jpg", category: "Lager" },
-        { id: "2", name: "Legend Stout", img: "img/legend-stout.jpg", category: "Stout" },
-        { id: "3", name: "Fayrouz", img: "img/fayrouz.jpg", category: "Soft Drink" },
+    { id: "1", name: "Heineken", img: "img/heineken.jpg", category: "Lager" },
+    { id: "2", name: "Legend Stout", img: "img/legend-stout.jpg", category: "Stout" },
+    { id: "3", name: "Fayrouz", img: "img/fayrouz.png", category: "Soft Drink" },
+    { id: "4", name: "Climax", img: "img/climax.png", category: "Soft Drink" },
+    { id: "5", name: "Amstel", img: "img/amstel.jpg", category: "Lager" },
+    { id: "6", name: "Maltina", img: "img/maltina.jpg", category: "Non-Alcoholic" },
     ];
+
+   
+   
+    (function addFavicon() {
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/png';  
+  link.href = 'img/favicon.ico';
+  document.head.appendChild(link);
+    })();
+
+
+
 
     productGrid.innerHTML = sampleDrinks.map(d => `
       <article class="product-card">
