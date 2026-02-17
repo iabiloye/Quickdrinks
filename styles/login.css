@@ -1,7 +1,7 @@
-
-   /* QuickDrinks - Login Page (Matched)
-   Author: Abiloye Iyanuoluwa John */
-   
+/* ===============================
+   QuickDrinks - Login Page (Matched + Nav Pattern)
+   Author: Abiloye Iyanuoluwa John
+   =============================== */
 
 :root {
   --navy: #003366;
@@ -13,13 +13,65 @@
   --invalid: #DC3545;
 }
 
-* { box-sizing: border-box; }
+* { 
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= HEADER (MATCH MAIN SITE) ================= */
+
+.site-header {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Alan Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.brand-name {
+  color: var(--white);
+}
+
+.main-nav a {
+  color: var(--white);
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--gold);
+}
+
+/* ================= FORM PAGE ================= */
 
 .form-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 140px); 
+  min-height: calc(100vh - 160px);
   background-color: var(--white);
   padding: 2rem 1rem;
 }
@@ -50,7 +102,8 @@
   font-size: 0.95rem;
 }
 
-/* Form */
+/* ================= FORM ================= */
+
 .user-form {
   display: flex;
   flex-direction: column;
@@ -58,7 +111,6 @@
   margin-top: 0.5rem;
 }
 
-/* Labels & inputs */
 .user-form label {
   display: block;
   font-family: "Poppins", sans-serif;
@@ -79,10 +131,6 @@
   transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.12s ease;
 }
 
-.user-form input::placeholder {
-  color: #9aa6b2;
-}
-
 .user-form input:focus {
   border-color: var(--navy);
   box-shadow: 0 4px 14px rgba(10, 81, 120, 0.06);
@@ -93,9 +141,10 @@
 .user-form input:valid { border-color: var(--valid); }
 .user-form input:invalid { border-color: var(--invalid); }
 
+/* ================= BUTTON ================= */
+
 .user-form .btn,
 .btn {
-  display: inline-block;
   width: 100%;
   padding: 0.85rem;
   background: var(--gold);
@@ -104,7 +153,6 @@
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  letter-spacing: 0.4px;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.12s ease, box-shadow 0.12s ease;
@@ -117,47 +165,37 @@
   box-shadow: 0 8px 18px rgba(0,0,0,0.06);
 }
 
-.form-footer {
-  margin-top: 1rem;
-  text-align: center;
-  font-family: "SUSE Mono", monospace;
-  color: var(--dark-gray);
-}
-
-.form-footer a {
-  color: var(--navy);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.form-footer a:hover {
-  color: var(--gold);
-  text-decoration: underline;
-}
-
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-family: "SUSE Mono", monospace;
-  color: var(--dark-gray);
-  font-size: 0.95rem;
-}
-
-.site-header { 
-  background-color: var(--navy);
-  color: var(--white);
-}
+/* ================= FOOTER ================= */
 
 .site-footer {
   background-color: var(--navy);
   color: var(--white);
+  padding: 2rem 0;
   margin-top: 2rem;
 }
 
+.footer-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
 @media (max-width: 520px) {
-  .form-container { padding: 1.25rem; border-radius: 12px; }
-  .form-container h2 { font-size: 1.3rem; }
-  .user-form input[type="email"], .user-form input[type="password"] { padding: 0.65rem; }
+  .form-container { 
+    padding: 1.25rem; 
+    border-radius: 12px; 
+  }
+  .form-container h2 { 
+    font-size: 1.3rem; 
+  }
 }
